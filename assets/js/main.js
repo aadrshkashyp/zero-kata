@@ -1,12 +1,19 @@
 import Game from "./Game.js"
+import GameView from "./GameView.js"
 
 let game = new Game();
+let gameView = new GameView();
 
-console.log(game.board);
-console.log("My Turn is", game.turn);
-game.nextTurn();
-console.log("My Turn is", game.turn);
-game.makeMove(3);
-console.log(game.board);
-game.makeMove(8);
-console.log(game.board);
+let titles = document.querySelectorAll(".board-title")
+titles.forEach((title) => {
+    title.addEventListener("click", () => {
+        onTitleClick(title.dataset.index);
+    })
+})
+
+function onTitleClick(i) {
+    game.makeMove(i);
+    gameView.updateBoard(game);
+    game.nextTurn();
+
+}
