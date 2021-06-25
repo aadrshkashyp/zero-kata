@@ -32,6 +32,11 @@ body {
 
 }
 
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
 .restart:hover {
     background-color: #4c6986;
     color: white;
