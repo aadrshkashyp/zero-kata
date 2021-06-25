@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    color: #4c6986;
+}
+
+.wrapper {
+    max-width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.restart {
+   
+    width: 175px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4c6986;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+
+.restart:hover {
+    background-color: #4c6986;
+    color: white;
+}
+
+.game {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+.header {
+    display: flex;
+    color: #9a9a9a;
+    font-size: 24px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.board-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: 80px;
+
+}
+
+.board-title:not(:nth-child(3n)) {
+    border-right: 3px solid rgba(137, 163, 189, 0.58);
+
+}
+
+.board-title:not(:nth-last-child(-n + 3)) {
+    border-bottom: 3px solid rgba(137, 163, 189, 0.58);
+}
