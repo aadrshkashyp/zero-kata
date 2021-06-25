@@ -14,6 +14,6 @@ titles.forEach((title) => {
 function onTitleClick(i) {
     game.makeMove(i);
     gameView.updateBoard(game);
-    game.nextTurn();
 
 }
+
