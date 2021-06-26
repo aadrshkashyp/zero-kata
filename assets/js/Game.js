@@ -2,19 +2,23 @@ export default class Game {
 
     constructor() {
         this.newGame();
+
+
     }
 
+
+
     newGame() {
-        this.turn = "X";
+        this.turn = "<span class=\"C\">C</class>";
         this.board = new Array(9).fill(null);
         this.winner = null;
     }
 
     nextTurn() {
-        if (this.turn === "X") {
-            this.turn = "O"
+        if (this.turn === "<span class=\"C\">C</class>") {
+            this.turn = "<span class=\"T\">T</class>"
         } else {
-            this.turn = "X"
+            this.turn = "<span class=\"C\">C</class>"
         }
     }
 

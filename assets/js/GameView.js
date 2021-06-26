@@ -10,7 +10,7 @@ export default class GameView {
         playerX.classList.remove("active");
         playerO.classList.remove("active");
 
-        if (game.turn == 'X') {
+        if (game.turn == '<span class=\"C\">C</class>') {
             playerX.classList.add('active');
         } else {
             playerO.classList.add('active');
